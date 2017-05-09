@@ -3,8 +3,6 @@
 var articles = [];
 
 function Article (rawDataObj) {
-  // TODO: Use the JS object passed in to complete this constructor function:
-  // Save ALL the properties of `rawDataObj` into `this`
   var title = this.title;
   var category = this.category;
   var author = this.author;
@@ -15,6 +13,7 @@ function Article (rawDataObj) {
 
 Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
+    $('$newArticle').addClass($('.template').css('display', 'show'));
   /* TODO: This cloned article still has a class of template.
   However, in our modules.css stylesheet, we gave all elements
   with a class of template a display of none. Let's make
