@@ -28,6 +28,8 @@ Article.prototype.toHtml = function() {
     4. article body, and
     5. publication date. */
   $newArticle.find('#frog').html(this.title);
+  $newArticle.find('.byline a').html(this.author);
+  $newArticle.find('.byline a').attr('href', this.authorURL);
   // Display the date as a relative number of 'days ago'
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
   $newArticle.append('<hr>');
